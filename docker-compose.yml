@@ -1,0 +1,22 @@
+version: '3'
+services:
+  server:
+    image: grpc
+    user: ${CURRENT_UID}
+    entrypoint: /bin/bash
+    command: -c "export GOPATH=`pwd`:$${GOPATH} && go run server/server.go"
+    working_dir: /server
+    volumes:
+    - .:/server
+    - .cache:/.cache
+  client:
+    image: grpc
+    user: ${CURRENT_UID}
+    entrypoint: /bin/bash
+    command: -c "export GOPATH=`pwd`:$${GOPATH} && go run client/client.go RockStar"
+    working_dir: /client
+    volumes:
+    - .:/client
+    - .cache:/.cache
+    depends_on:
+    - server
