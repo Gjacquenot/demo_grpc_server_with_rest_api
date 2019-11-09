@@ -1,0 +1,6 @@
+sudo: required
+dist: trusty
+services:
+  - docker
+script:
+  - make
