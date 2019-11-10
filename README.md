@@ -17,6 +17,16 @@ All examples are based on [EchoService](src/pb/service.proto)
 | 2 | Go server     | Go REST client | Client sends its requests to reverse-proxy |
 | 3 | Python server | Go REST client | Client sends its requests to reverse-proxy |
 
+A simple [`make`](Makefile) will:
+
+- build docker image
+- generate protobuf code with docker
+- test gRPC go server with go client
+- test gRPC go server with reverse go proxy and go client through REST API
+- test gRPC python server with reverse go proxy and go client through REST API
+- test gRPC go server and reverse go proxy with external cURL request
+- test gRPC python server and reverse go proxy with external cURL request
+
 # References
 
 - https://github.com/grpc-ecosystem/grpc-gateway
