@@ -9,6 +9,14 @@ A [`Dockerfile`](Dockerfile) is used to define all required dependencies.
 
 Several `docker-compose` yaml files define the services and how they interact.
 
+All examples are based on [EchoService](src/pb/service.proto)
+
+|   | gRPC server   | Client         | Comments                                   |
+|---| ------------- | -------------- | ------------------------------------------ |
+| 1 | Go server     | Go gRPC client | NO use for gateway / reverse-proxy         |
+| 2 | Go server     | Go REST client | Client sends its requests to reverse-proxy |
+| 3 | Python server | Go REST client | Client sends its requests to reverse-proxy |
+
 # References
 
 - https://github.com/grpc-ecosystem/grpc-gateway
