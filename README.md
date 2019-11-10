@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Gjacquenot/demo_grpc_server_with_rest_api.svg?branch=master)](https://travis-ci.org/Gjacquenot/demo_grpc_server_with_rest_api)
 
-This repository contains examples of gRPC servers with
+This repository contains examples of gRPC servers
 with HTTP/REST endpoints thanks to gRPC-gateways.
 
 A [`Dockerfile`](Dockerfile) is used to define all required dependencies.
@@ -29,5 +29,6 @@ A simple [`make`](Makefile) will:
 
 # References
 
+- https://grpc.io
 - https://github.com/grpc-ecosystem/grpc-gateway
 - https://programmer.help/blogs/grpc-gateway-a-solution-for-grpc-to-provide-http-services-to-the-outside-world.html
